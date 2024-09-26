@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Dummy User Data Generator By Team Defenders</h1>
+        <form action="/generate" method="POST">
+
+            <p>Select the types of data to generate:</p>
+            <div class="checkbox-container">
+                <label class="checkbox-btn">
+                    <input type="checkbox" id="name" name="fields" value="name">
+                    <span class="btn-text">Name</span>
+                </label>
+
+                <label class="checkbox-btn">
+                    <input type="checkbox" id="email" name="fields" value="email">
+                    <span class="btn-text">Email</span>
+                </label>
+
+                <label class="checkbox-btn">
+                    <input type="checkbox" id="address" name="fields" value="address">
+                    <span class="btn-text">Address</span>
+                </label>
+
+                <label class="checkbox-btn">
+                    <input type="checkbox" id="phone_number" name="fields" value="phone_number">
+                    <span class="btn-text">Phone Number</span>
+                </label>
+
+                <label class="checkbox-btn">
+                    <input type="checkbox" id="job" name="fields" value="job">
+                    <span class="btn-text">Job</span>
+                </label>
+
+                <label class="checkbox-btn">
+                    <input type="checkbox" id="company" name="fields" value="company">
+                    <span class="btn-text">Company</span>
+                </label>
+
+                <label class="checkbox-btn">
+                    <input type="checkbox" id="birthdate" name="fields" value="birthdate">
+                    <span class="btn-text">Birthdate</span>
+                </label>
+
+                <label class="checkbox-btn">
+                    <input type="checkbox" id="username" name="fields" value="username">
+                    <span class="btn-text">Username</span>
+                </label>
+
+                <label class="checkbox-btn">
+                    <input type="checkbox" id="ssn" name="fields" value="ssn">
+                    <span class="btn-text">SSN</span>
+                </label>
+            </div>
+
+            <p>Select a Country:</p>
+            <select id="country" name="country" required>
+                <option value="en_US">United States</option>
+                <option value="en_IN">India</option>
+                <option value="fr_FR">France</option>
+                <option value="en_GB">United Kingdom</option>
+                <option value="de_DE">Germany</option>
+            </select>
+
+            <label for="num_users">Number of Users:</label>
+            <input type="number" id="num_users" name="num_users" required>
+
+            <button type="submit">Generate</button>
+        </form>
+        <footer>
+            <p style="font-size: 0.8em; color: #666; margin-top: 20px;">
+                © 2024 Team Defenders. All rights reserved. 
+                <span style="font-weight: bold;">™</span> 
+                | <a href="https://github.com/120-Eye" target="_blank" style="color: #4CAF50; text-decoration: none;">GitHub Profile</a>
+            </p>
+        </footer>
+    </div>
+    
+</body>
+</html>
+
